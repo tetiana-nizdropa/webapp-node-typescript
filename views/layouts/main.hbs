@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Express handlebars</title>
+    </head>
+    <body>
+    <script>
+        let page = 1;
+        document.addEventListener('DOMContentLoaded', () => {
+            // next page link 
+            let next = document.getElementById('nextPageLink');
+            if (next) {
+                next.addEventListener('click', () => {
+                    page++;
+                    if (page >= 1 && page < 4){
+                        next.href = '/page=' + page.toString();
+                    }           
+                });
+            }
+        });
+    </script>
+        {{{body}}}
+    </body>
+</html>

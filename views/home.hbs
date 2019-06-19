@@ -1,0 +1,55 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {background-color: #f2f2f2;}
+
+    a {
+        text-decoration: underline;
+        color: blue;
+    }
+    /* unvisited link */
+    a:link {
+        color: red;
+    }
+
+    /* visited link */
+    a:visited {
+        color: green;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: hotpink;
+    }
+
+    /* selected link */
+    a:active {
+        color: blue;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let links = document.getElementsByTagName('a');
+        if (links.length) {
+            for (let item of links) {
+                if (item.innerHTML === 'Previous Page' && {{ previousPage }} < 1) {
+                    item.href = "";
+                }
+                if (item.innerHTML === 'Next Page' && {{ nextPage }} > 4) {
+                    item.href = "";
+                }
+            }
+        }
+    });
+</script>
+{{{makeTable users}}}
+<a href='/page={{ previousPage }}'>Previous Page</a>
+<a href='/page={{ nextPage }}'>Next Page</a>
