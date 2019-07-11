@@ -51,6 +51,7 @@
     "typescript-register": "^1.1.0"
   },
   "dependencies": {
+    "mongodb": "^3.2.7",
     "request-promise": "^4.2.4"
   }
 }

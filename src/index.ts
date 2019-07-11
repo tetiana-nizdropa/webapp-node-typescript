@@ -1,30 +1,3 @@
-// const express = require('express');
-// const app = express();
-
-// app.use((request, response, next) => {
-//     console.log(request.headers);
-//     next();
-// });
-// app.use((request, response, next) => {
-//     request.chance = Math.random();
-//     next();
-// });
-// app.get('/', (request, response) => {
-//     if (request.chance && request.chance > 0.5) {
-//         response.json({
-//             chance: request.chance
-//         });
-//     }
-//     else {
-//         throw new Error('Error message!');
-//     }
-// });
-// app.use((err, request, response, next) => {
-//     console.log(err);
-//     response.status(500).send('Error! a-a-a-a!!');
-// });
-// app.listen(3000);
-
 import * as path from 'path';
 import * as express from 'express';
 import * as exphbs from 'express-handlebars';

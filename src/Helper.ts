@@ -1,6 +1,4 @@
-import * as handelbars from 'express-handlebars';
 import { User } from './dataBase/Models/User';
-import { userInfo } from 'os';
 
 function makeTable (data): string {
     let str = '<table>';
@@ -9,6 +7,9 @@ function makeTable (data): string {
         for (const key in data[i]) {
             if (key === 'avatar') {
                 str += '<td><img src=' + data[i][key] + '></td>';
+            }
+            else if (key === 'createdAt' || key === 'updatedAt' || key === 'page') {
+                str += '<td></td>';
             }
             else {
                 str += '<td>' + data[i][key] + '</td>';

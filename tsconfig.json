@@ -14,8 +14,6 @@
     ],
     "include": [
       "src/*.ts"
-      // "src/**/*.ts",
-      // "src/dataBase/**/*.ts"
     ],
     "exclude": [
       "node_modules"
