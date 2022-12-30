@@ -35,7 +35,7 @@
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.1",
     "gulp-util": "^3.0.8",
-    "mocha": "^6.0.2",
+    "mocha": "^10.2.0",
     "mysql": "^2.10.2",
     "mysql2": "^1.6.5",
     "nyc": "^13.3.0",
